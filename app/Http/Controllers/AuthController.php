@@ -64,4 +64,14 @@ class AuthController extends Controller
 			'token_type' => 'Bearer',
 		], 201);
 	}
+
+	public function logout(Request $request)
+	{
+		// Hapus token yang sedang digunakan saat request ini dilakukan
+		$request->user()->currentAccessToken()->delete();
+
+		return response()->json([
+			'message' => 'Logout berhasil, token telah dicabut.'
+		]);
+	}
 }
