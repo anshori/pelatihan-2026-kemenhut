@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -8,4 +9,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/kotayogyakarta', [ApiController::class, 'geojson_kotayogyakarta'])->name('api.geojson.kotayogyakarta');
+Route::get('/kotayogyakarta', [ApiController::class, 'geojson_kotayogyakarta'])->name('api.geojson.kotayogyakarta')->middleware('auth:sanctum');
+
+Route::post('/login', [AuthController::class, 'login']);
