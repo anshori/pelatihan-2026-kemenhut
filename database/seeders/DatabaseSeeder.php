@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'm.anshory@gmail.com',
 						'password' => bcrypt('password')
         ]);
+        $this->call(KotayogyakartaTableSeeder::class);
     }
 }

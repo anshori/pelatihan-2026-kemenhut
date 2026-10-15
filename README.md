@@ -12,3 +12,10 @@
 10. Open your POSTMAN and go to `http://localhost:8000/register` to register new user
 11. Open your POSTMAN and go to `http://localhost:8000/kotayogyakarta` to get GeoJSON data of Kota Yogyakarta (you need to login first to get the token)
 12. Open your POSTMAN and go to `http://localhost:8000/logout` to logout (you need to login first to get the token)
+
+# Requirements
+1. PHP >= 8.3
+2. Composer
+3. Node.js >= 22 LTS
+4. PostgreSQL >= 18
+5. PostGIS >= 3.4
